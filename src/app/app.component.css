@@ -1,0 +1,19 @@
+.orange-logo {
+  margin: 0 2px 1px 0;
+  height: 45px;
+  vertical-align: middle;
+}
+.header{
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  background: #01a5f1;
+  z-index: 1000;
+}
+.service-title{
+  margin-right: 20px;
+  text-align: center;
+}
+.fill-remaining-space {
+  flex: 1 1 auto;
+}

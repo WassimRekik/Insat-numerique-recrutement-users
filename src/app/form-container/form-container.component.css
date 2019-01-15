@@ -1,0 +1,177 @@
+.card-content{
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 640px;
+}
+.full-with{
+  width: 100%;
+  background: transparent;
+}
+.page-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  background: transparent;
+}
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.form-page-content{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+}
+.input-email{
+  width: 300px;
+  padding: 10px;
+  font-size: 1.1em;
+}
+.input-password{
+  width: 300px;
+  padding: 10px;
+  font-size: 1.2em;
+}
+.submit-button{
+  padding: 10px;
+  font-size: 1.2em;
+  color: #3E80CC;
+  margin:auto;
+  display:block;
+}
+div.license-agreement
+{
+  margin: 20px 40px;
+  width: 100%;
+  height: 450px;
+  overflow-y:scroll;
+  font-size: 16px;
+  padding: 10px;
+  border-left: 2px solid #3E80CC;
+
+}
+.progress{
+  margin: 5px 40px;
+}
+.licence-page-content{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5%;
+  width: 100%;
+}
+.submit-button2{
+  padding: 3px 4px;
+  font-size: 1.2em;
+  color: #3E80CC;
+}
+
+.button-div{
+  width: 90%;
+  height: 50px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: rgba(245, 245, 245, 0.79);}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(201, 201, 201, 0.8);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #3E80CC;
+  border-radius: 5px;
+
+}
+
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 45px;
+  margin-left: 40px;
+  padding-top: 5px;
+  cursor: pointer;
+  font-size: 22px;
+  color: #858585;
+  font-family: Arial;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 48px;
+  width: 100px;
+
+}
+
+/* Hide the browser's default checkbox */
+.container input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #fff;
+  border: solid #dfdfdf;
+  border-radius: 5px;
+
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+  border: solid #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

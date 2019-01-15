@@ -1,0 +1,83 @@
+<div class="page-content">
+  <mat-horizontal-stepper [linear]="true" #stepper class="full-with" >
+    <mat-step [stepControl]="registerForm">
+      <ng-template matStepLabel>Personal Information</ng-template>
+      <mat-card class="card-content" >
+        <form [formGroup]="registerForm">
+          <div>
+            <mat-form-field class="input-email">
+              <input matInput placeholder="Enter your name" formControlName="nom"  required >
+              <mat-error *ngIf="registerForm.controls['nom'].invalid">Invalid Name</mat-error>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field class="input-email">
+              <input matInput placeholder="Enter your last name" formControlName="prenom"  required >
+              <mat-error *ngIf="registerForm.controls['prenom'].invalid">Invalid Last name</mat-error>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field class="input-email">
+              <input matInput placeholder="Enter your email" formControlName="email"  required >
+              <mat-error *ngIf="registerForm.controls['email'].invalid">Invalid Email</mat-error>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field class="input-email">
+              <input matInput placeholder="Enter your CIN" formControlName="cin"  required >
+              <mat-error *ngIf="registerForm.controls['cin'].invalid">Invalid CIN</mat-error>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field class="input-email">
+              <input matInput placeholder="Enter your Adress" formControlName="adresse"  required >
+              <mat-error *ngIf="registerForm.controls['adresse'].invalid">Invalid Adress</mat-error>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field class="input-email">
+              <input matInput placeholder="Enter your Phone number" formControlName="tel"  required >
+              <mat-error *ngIf="registerForm.controls['tel'].invalid">Invalid Phone number</mat-error>
+            </mat-form-field>
+          </div>
+          <button mat-stroked-button matStepperNext color="primary" class="submit-button">Continue</button>
+        </form>
+      </mat-card>
+    </mat-step>
+    <mat-step [stepControl]="registerFormJob" >
+      <ng-template matStepLabel>Job Information</ng-template>
+      <mat-card class="card-content" >
+        <form [formGroup]="registerFormJob">
+        <div>
+          <mat-form-field class="input-email">
+            <input matInput placeholder="Specialty" formControlName="specialty"  required >
+            <mat-error *ngIf="registerFormJob.controls['specialty'].invalid">Invalid Specialty</mat-error>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="input-email">
+            <input matInput placeholder="Department" formControlName="department"  required >
+            <mat-error *ngIf="registerFormJob.controls['department'].invalid">Invalid Specialty</mat-error>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="input-email">
+            <input matInput placeholder="Grade" formControlName="grade"  required >
+            <mat-error *ngIf="registerFormJob.controls['grade'].invalid">Invalid Grade</mat-error>
+          </mat-form-field>
+        </div>
+          <button mat-stroked-button matStepperNext color="primary" class="submit-button" (click)="onSend(stepper)">Send</button>
+        </form>
+      </mat-card>
+    </mat-step>
+    <mat-step [stepControl]="registerFormJob" >
+      <ng-template matStepLabel>Sent</ng-template>
+      <mat-card class="card-content" >
+        <mat-progress-bar mode="indeterminate" *ngIf="!submitted"></mat-progress-bar>
+        <div *ngIf="submitted">
+          {{serverResult}}
+        </div>
+      </mat-card>
+    </mat-step>
+  </mat-horizontal-stepper>
+</div>
